@@ -2,14 +2,14 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+        <link rel="stylesheet" href="../static/style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     </head>
     <body>
         <nav>
             <a href="http://first-news-app.readthedocs.org/">
-                <img src="{{ url_for('static', filename='irelogo.png') }}">
+                <img src="../static/irelogo.png"">
             </a>
         </nav>
         <header>
@@ -42,7 +42,7 @@
         {% endfor %}
         </table>
         <script type="text/javascript">
-        
+
             var map = L.map('map').setView([34.055, -118.35], 9);
             var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 18,
@@ -69,7 +69,7 @@
             };
             var blackIcon = L.Icon.extend({
                options: {
-                   iconUrl: "{{ url_for('static', filename='marker-24.png') }}",
+                   iconUrl: "../static/marker-24.png",
                    iconSize: [24, 24]
                }
            });
